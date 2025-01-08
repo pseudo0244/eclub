@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Entrepreneurship Club
 
-## Getting Started
+The **Entrepreneurship Club** is for those who dream beyond the rational limits and for those who seek to make it a reality. 
 
-First, run the development server:
+- **Founded:** November 02, 2019
+- **Location:** PESU EC Campus
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About this Club
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+We gather and nurture the spirited individuals in the engineering community by kindling their entrepreneurial mindset. The club aims to establish a peer network of students who are inclined towards entrepreneurship and help them connect with the relevant stakeholders through events, associations, and more.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+We provide a platform for students to explore their entrepreneurial potential, engage in discussions, participate in events, and access opportunities for growth and networking. Our mission is to create an ecosystem where budding entrepreneurs can thrive and turn their ideas into reality.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features of the Website
 
-## Learn More
+- **Dynamic Content:** The website is built using **Next.js** and **TypeScript** for a modern and efficient development experience.
+- **Responsive Design:** Tailored for both desktop and mobile users, ensuring smooth interaction across devices.
+- **Interactive Elements:** Engage with various sections including events, about us, and more.
+- **Upcoming Events:** Get the latest information on club activities and events.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js**: A React framework for server-side rendering and static website generation.
+- **TypeScript**: A superset of JavaScript that adds static types, making development more predictable and error-free.
+- **Tailwind CSS**: A utility-first CSS framework to design beautiful and responsive UIs.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How to Contribute
 
-## Deploy on Vercel
+1. **Fork the repository**
+2. **Clone your fork**  
+   ```bash
+   git clone https://github.com/<your-username>/eclub-website.git
+   ```
+3. **Install dependencies**  
+   ```bash
+   npm install
+   ```
+4. **Run the development server**  
+   ```bash
+   npm run dev
+   ```
+5. Make your changes and **submit a pull request**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For more information, feel free to reach out to us at:
+
+- **Email:** eclub@pesu.edu
+- **Website:** [eclub.pesu.edu](https://eclub.pesu.edu)
+
+Follow us on social media for the latest updates on events and news:
+
+- [Instagram](https://instagram.com/eclub_pesu)
+- [Twitter](https://twitter.com/eclub_pesu)
+
+---
+
+Thank you for visiting the eClub website!
