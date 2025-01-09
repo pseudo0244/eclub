@@ -8,45 +8,14 @@ import { MeshGradient } from "@/components/ui/mesh-gradient"
 import { Timeline } from "@/components/ui/timeline"
 import { Marquee } from "@/components/ui/marquee"
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu" // Assuming these are imported from your components
+import Header from '@/components/ui/header'
 
 export default function About() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <span className="text-xl font-bold">E-CLUB</span>
-            </div>
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="about" className="hover:text-primary mr-4">
-                    About
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="#events" className="hover:text-primary mr-4">
-                    Events
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="#gallery" className="hover:text-primary mr-4">
-                    Gallery
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="#blogs" className="hover:text-primary mr-4">
-                    Blogs
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <Button variant="outline">Contact Us</Button>
-          </div>
-        </div>
-      </nav>
+     <Header/>
+    <div className="min-h-screen bg-background text-foreground">
+      
 
       {/* Hero Section with Large Image */}
       <section className="relative h-[100vh] overflow-hidden">
@@ -120,20 +89,17 @@ export default function About() {
       {/* Marquee Section */}
       <section className="py-20 px-4 relative overflow-hidden">
         <MeshGradient className="absolute inset-0 opacity-30" />
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-7">
           <h2 className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
-            Companies Our Alumni Have Founded
+            TOP EVENTS HOSTED BY E CLUB
           </h2>
           <Marquee
             items={[
-              { name: "TechNova", logo: "/logos/technova.svg" },
-              { name: "GreenLeaf Solutions", logo: "/logos/greenleaf.svg" },
-              { name: "QuantumAI", logo: "/logos/quantumai.svg" },
-              { name: "CyberShield", logo: "/logos/cybershield.svg" },
-              { name: "BioGenix", logo: "/logos/biogenix.svg" },
-              { name: "NanoTech Industries", logo: "/logos/nanotech.svg" },
-              { name: "EcoSmart", logo: "/logos/ecosmart.svg" },
-              { name: "DataSphere", logo: "/logos/datasphere.svg" },
+              { name: "Wolf of Wall Street", logo: "/Events_past/wow.png" },
+              { name: "Brand Blitz", logo: "/Events_past/brand.png" },
+              { name: "BID 2 Build", logo: "/Events_past/B2B.png" },
+              { name: "E Summit 23", logo: "/Events_past/esummit.png" },
+              { name: "She Summit", logo: "/Events_past/she.png" },
             ]}
           />
         </div>
@@ -154,6 +120,7 @@ export default function About() {
           </Button>
         </div>
       </section>
+    </div>
     </div>
   )
 }

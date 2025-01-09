@@ -6,9 +6,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { MeshGradient } from "@/components/ui/mesh-gradient"
 import { Countdown } from "@/components/ui/countdown"
+import Header from '@/components/ui/header'
 
 export default function ComingSoonPage() {
   return (
+    <div className="min-h-screen bg-background text-foreground">
+     <Header/>
+    
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-center items-center relative overflow-hidden">
       <MeshGradient className="absolute inset-0 opacity-50" />
         
@@ -43,6 +47,7 @@ export default function ComingSoonPage() {
             </a>
           ))}
         </div>
+      </div>
       </div>
   )
 }

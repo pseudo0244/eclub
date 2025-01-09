@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Separator } from "@/components/ui/separator"
+import Header from '@/components/ui/header'
 
 interface TeamMember {
   name: string;
@@ -21,56 +22,22 @@ interface TeamMember {
 }
 
 const teamMembers: TeamMember[] = [
-  { name: "John Doe", position: "President", image: "/images/john-doe.jpg" },
-  { name: "Jane Smith", position: "Vice President", image: "/images/jane-smith.jpg" },
-  { name: "Mike Johnson", position: "Secretary" },
-  { name: "Emily Brown", position: "Treasurer", image: "/images/emily-brown.jpg" },
-  { name: "Alex Lee", position: "Event Coordinator" },
-  { name: "Sarah Davis", position: "Marketing Lead", image: "/images/sarah-davis.jpg" },
-  { name: "Chris Wilson", position: "Tech Lead" },
-  { name: "Rachel Taylor", position: "Outreach Coordinator", image: "/images/rachel-taylor.jpg" },
-  { name: "David Martinez", position: "Content Creator" },
-  { name: "Lisa Anderson", position: "Membership Manager", image: "/images/lisa-anderson.jpg" }
+  { name: "Kaashvi R", position: "President", image: "/Team/Kaashvi.png" },
+  { name: "Neha Nair", position: "Vice President", image: "/Team/Neha Nair_VP.jpg" },
+  { name: "Devansh V", position: "Head of Events", image: "/Team/Devansh_Events.jpg" },
+  { name: "Shrikrishna Pandit", position: "Head of Events", image: "/Team/Shrikrishna.jpg" },
+  { name: "Prathamesh Devadiga", position: "Head of Technology", image: "/Team/Prathamesh.jpg" },
+  { name: "Kamya Jha", position: "Head of SMM", image: "/Team/Kamya.jpg" },
+  { name: "Shreya S", position: "Head of Corporate Relations", image: "/Team/Shreya S CR.jpg" },
+  { name: "Saabith Salem", position: "Head of Corporate Relations", image: "/Team/SaabithSaleem_CR.jpg" },
+  { name: "Amogh K", position: "Head of Operations", image: "/Team/amogh_ops_head.jpg" },
+  { name: "Parikshil Sharma", position: "Head of Operations", image: "/Team/Parikshilsharma.jpg" },
 ];
 
 export default function HomeAttachment() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <span className="text-xl font-bold">E-CLUB</span>
-            </div>
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="about" className="hover:text-primary mr-4">
-                    About
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="events" className="hover:text-primary mr-4">
-                    Events
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="gallery" className="hover:text-primary mr-4">
-                    Gallery
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="blogs" className="hover:text-primary mr-4">
-                    Blogs
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <Button variant="outline">Contact Us</Button>
-          </div>
-        </div>
-      </nav>
+     <Header/>
 
       {/* Enhanced Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -181,28 +148,94 @@ export default function HomeAttachment() {
         </div>
       </section>
 
-      {/* Updated Gallery Section */}
-      <section id="gallery" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <Card key={item} className="overflow-hidden hover:scale-105 transition-transform">
-                <Image
-                  src={`/images/gallery-${item}.jpg`}
-                  alt={`Gallery image ${item}`}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-                />
-              </Card>
-            ))}
-          </div>
-          <div className="text-center">
-            <Button size="lg">View More</Button>
-          </div>
-        </div>
-      </section>
+{/*GALLERY SECTION*/}
+<section id="gallery" className="py-20 px-4">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-4xl font-bold mb-12 text-center">Gallery</h2>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+        <Image
+          src="/Gallery/1.jpg"
+          alt="Gallery image 1"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+        <Image
+          src="/Gallery/2.jpg"
+          alt="Gallery image 2"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+        <Image
+          src="/Gallery/3.jpg"
+          alt="Gallery image 3"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+        <Image
+          src="/Gallery/4.jpeg"
+          alt="Gallery image 4"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+        <Image
+          src="/Gallery/5.jpeg"
+          alt="Gallery image 4"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+        <Image
+          src="/Gallery/6.jpg"
+          alt="Gallery image 4"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+        <Image
+          src="/Gallery/7.jpg"
+          alt="Gallery image 4"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+        <Image
+          src="/Gallery/8.jpg"
+          alt="Gallery image 4"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+    <div className="text-center">
+      <a 
+      href="/gallery"
+      className="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition ">
+        View More
+      </a>
+    </div>
+  </div>
+</section>
+
 
       {/* Updated Team Section */}
       <section id="team" className="py-20 px-4 bg-muted">
@@ -211,7 +244,7 @@ export default function HomeAttachment() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="text-center">
-                <CardContent className="p-6">
+                <CardContent className="p-5">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-muted">
                     {member.image ? (
                       <Image
