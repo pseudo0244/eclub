@@ -288,6 +288,7 @@ export default function HomeAttachment() {
         </div>
       </footer>
     </div>
+    {/*End */}
   )
 }
 
