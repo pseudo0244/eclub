@@ -7,7 +7,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MeshGradient } from "@/components/ui/mesh-gradient"
 import { Timeline } from "@/components/ui/timeline"
 import { Marquee } from "@/components/ui/marquee"
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu" // Assuming these are imported from your components
 import Header from '@/components/ui/header'
 
 export default function About() {
@@ -18,7 +17,7 @@ export default function About() {
       
 
       {/* Hero Section with Large Image */}
-      <section className="relative h-[100vh] overflow-hidden">
+      <section className="relative h-[100vh] overflow-hidden"> 
         <Image
           src="/assets/about _hero.png" // Correct image path
           alt="E-CLUB members collaborating"
@@ -113,7 +112,7 @@ export default function About() {
             Get in Touch
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Interested in joining E-CLUB or have any questions? We'd love to hear from you!
+            Interested in joining E-CLUB or have any questions? We&apos;d love to hear from you!
           </p>
           <Button size="lg" className="bg-gradient-to-r from-primary to-purple-500 hover:from-primary/80 hover:to-purple-500/80 text-primary-foreground">
             Contact Us

@@ -31,7 +31,7 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [targetDate]) // Depend on targetDate so the countdown updates when the target changes
+  }, [targetDate])
 
   const timeComponents: JSX.Element[] = []
 
@@ -50,7 +50,7 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
       {timeComponents.length ? (
         timeComponents
       ) : (
-        <span className="text-4xl font-bold">Time's up!</span>
+        <span className="text-4xl font-bold">Time&apos;s up!</span> 
       )}
     </div>
   )

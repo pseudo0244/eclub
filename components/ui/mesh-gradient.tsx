@@ -1,8 +1,6 @@
 import React from 'react'
 
-interface MeshGradientProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const MeshGradient: React.FC<MeshGradientProps> = ({ className, ...props }) => {
+export const MeshGradient: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
   return (
     <div
       className={`absolute inset-0 ${className}`}
@@ -18,4 +16,3 @@ export const MeshGradient: React.FC<MeshGradientProps> = ({ className, ...props 
     />
   )
 }
-

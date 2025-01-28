@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { MeshGradient } from "@/components/ui/mesh-gradient"
@@ -20,7 +19,7 @@ export default function ComingSoonPage() {
         </h1>
         
         <p className="text-xl md:text-2xl mb-12 text-muted-foreground">
-          We're working hard to bring you something amazing. Stay tuned!
+          We&apos;re working hard to bring you something amazing. Stay tuned!
         </p>
         
         <Countdown targetDate={new Date('2023-12-31T00:00:00')} />
@@ -50,4 +49,3 @@ export default function ComingSoonPage() {
       </div>
   )
 }
-

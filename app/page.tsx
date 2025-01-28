@@ -4,14 +4,6 @@ import React from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
 import { Separator } from "@/components/ui/separator"
 import Header from '@/components/ui/header'
 
@@ -115,7 +107,7 @@ export default function HomeAttachment() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  We are more than just a club – we're a community of dreamers, innovators, and future leaders. Our mission is to foster entrepreneurial spirit and provide the resources needed to turn ideas into successful ventures.
+                  We are more than just a club – we&apos;re a community of dreamers, innovators, and future leaders. Our mission is to foster entrepreneurial spirit and provide the resources needed to turn ideas into successful ventures.
                 </p>
                 <p>
                   Through mentorship, workshops, and networking events, we help students develop the skills and connections they need to succeed in the startup ecosystem.
@@ -148,146 +140,83 @@ export default function HomeAttachment() {
         </div>
       </section>
 
-{/*GALLERY SECTION*/}
-<section id="gallery" className="py-20 px-4">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="text-4xl font-bold mb-12 text-center">Gallery</h2>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-        <Image
-          src="/Gallery/1.jpg"
-          alt="Gallery image 1"
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-        <Image
-          src="/Gallery/2.jpg"
-          alt="Gallery image 2"
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-        <Image
-          src="/Gallery/3.jpg"
-          alt="Gallery image 3"
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-        <Image
-          src="/Gallery/4.jpeg"
-          alt="Gallery image 4"
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-        <Image
-          src="/Gallery/5.jpeg"
-          alt="Gallery image 4"
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-        <Image
-          src="/Gallery/6.jpg"
-          alt="Gallery image 4"
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-        <Image
-          src="/Gallery/7.jpg"
-          alt="Gallery image 4"
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-        <Image
-          src="/Gallery/8.jpg"
-          alt="Gallery image 4"
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-    <div className="text-center">
-      <a 
-      href="/gallery"
-      className="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition ">
-        View More
-      </a>
-    </div>
-  </div>
-</section>
-
-
-      {/* Updated Team Section */}
-      <section id="team" className="py-20 px-4 bg-muted">
+      {/*GALLERY SECTION*/}
+      <section id="gallery" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Meet Our Team</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="text-center">
-                <CardContent className="p-5">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-muted">
-                    {member.image ? (
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        width={128}
-                        height={128}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-2xl font-bold text-primary-foreground bg-primary">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </div>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-muted-foreground">{member.position}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <h2 className="text-4xl font-bold mb-12 text-center">Gallery</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+              <Image
+                src="/Gallery/1.jpg"
+                alt="Gallery image 1"
+                width={400}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+              <Image
+                src="/Gallery/2.jpg"
+                alt="Gallery image 2"
+                width={400}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+              <Image
+                src="/Gallery/3.jpg"
+                alt="Gallery image 3"
+                width={400}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+              <Image
+                src="/Gallery/4.jpeg"
+                alt="Gallery image 4"
+                width={400}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+              <Image
+                src="/Gallery/5.jpeg"
+                alt="Gallery image 4"
+                width={400}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 border-t">
+      {/* Team Section */}
+      <section id="team" className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-4">E-CLUB</h3>
-          <p className="text-muted-foreground mb-8">Building tomorrow's entrepreneurs today</p>
-          <div className="flex justify-center space-x-6 mb-8">
-            {['Twitter', 'LinkedIn', 'Instagram'].map((social) => (
-              <a key={social} href="#" className="text-muted-foreground hover:text-primary">
-                {social}
-              </a>
+          <h2 className="text-4xl font-bold mb-8">Meet Our Team</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="text-center">
+                <div className="relative">
+                  <Image
+                    src={member.image || "/default-avatar.jpg"}
+                    alt={member.name}
+                    width={200}
+                    height={200}
+                    className="rounded-full mx-auto mb-4"
+                  />
+                </div>
+                <h3 className="font-semibold">{member.name}</h3>
+                <p className="text-muted-foreground">{member.position}</p>
+              </div>
             ))}
           </div>
-          <Separator className="mb-8" />
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} E-Club. All rights reserved.
-          </p>
         </div>
-      </footer>
+      </section>
     </div>
   )
 }
-
