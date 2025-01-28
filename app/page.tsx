@@ -4,7 +4,6 @@ import React from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
 import Header from '@/components/ui/header'
 
 interface TeamMember {
