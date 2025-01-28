@@ -5,7 +5,7 @@ interface TimelineEvent {
   title: string;
   description: string;
 }
-
+  
 interface TimelineProps {
   events: TimelineEvent[];
 }

@@ -6,3 +6,4 @@ export function cn(...inputs: ClassValue[]) {
   // Merge and return the combined class names
   return twMerge(clsx(...inputs));
 }
+m
