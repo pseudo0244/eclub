@@ -37,3 +37,6 @@ urlpatterns = [
 # /blogs page #contains currently not ready static text and not working notify section and social buttons/links.
 # must make a contact us page.
 # must make a discreet login page for ppl to post blogs.
+#admin must be able to control the website fully without having to go into the code/server
+#admin must be able to add users (for blogposts) and view their points
+#other examples: in the about us page and homepage, admin must be able to easily change the team_members. you could make models for members in the backend and have it render in a loop maybe.
