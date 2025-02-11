@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+{% load static %}
+<script src="https://cdn.tailwindcss.com"></script>
+<html lang="en" class="dark">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Entrepreneurship Club</title>
+</head>
+<body >
+    <!-- Header -->
+    <header>
+        <nav class="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <span class="text-xl font-bold">E-CLUB</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="/" class="hover:text-primary">Home</a>
+                        <a href="/about" class="hover:text-primary">About</a>
+                        <a href="/events" class="hover:text-primary">Events</a>
+                        <a href="/gallery" class="hover:text-primary">Gallery</a>
+                        <a href="/blogs" class="hover:text-primary">Blogs</a>
+                    </div>
+                    <button class="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md"> <a href="/contact">Contact Us</a> </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,hsl(var(--primary))_0.1,transparent_2px)] bg-[length:24px_24px]"></div>
+        <div class="relative z-10 text-center px-4 max-w-7xl mx-auto">
+            <div class="relative inline-block">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight relative z-10">
+                    <span class="block transform hover:scale-105 transition-transform">The</span>
+                    <span class="block transform hover:scale-105 transition-transform">Entrepreneurship</span>
+                    <span class="block transform hover:scale-105 transition-transform">Club</span>
+                </h1>
+                <div class="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+            </div>
+            <p class="text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto">
+                Have an idea but unsure what to do next? Fill out the form to collaborate with us!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button class="h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90">Collab Now</button>
+                <button class="h-11 rounded-md px-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground"> <a href="/events">Events</a> </button>
+            </div>
+        </div>
+        <div class="absolute top-1/4 left-[15%] bg-background/10 backdrop-blur-sm transform -rotate-12 hover:rotate-0 transition-transform">
+            <div class="p-6">
+                <p class="text-lg font-semibold">5+</p>
+                <p class="text-sm text-muted-foreground">Startups Launched</p>
+            </div>
+        </div>
+        <div class="absolute bottom-1/4 right-[15%] bg-primary/10 backdrop-blur-sm transform rotate-12 hover:rotate-0 transition-transform">
+            <div class="p-6">
+                <p class="text-lg font-semibold">30+</p>
+                <p class="text-sm text-muted-foreground">Events Hosted</p>
+            </div>
+        </div>
+        <div class="absolute top-1/4 right-[20%] bg-background/10 backdrop-blur-sm transform rotate-6 hover:rotate-0 transition-transform">
+            <div class="p-6">
+                <p class="text-lg font-semibold">50+</p>
+                <p class="text-sm text-muted-foreground">Active Members</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,hsl(var(--primary))_0.1,transparent_2px)] bg-[length:24px_24px]"></div>
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                        <img src="{% static 'assets/hero_demo.webp' %}" alt="Students collaborating" class="w-full h-[600px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-5xl font-bold mb-8 leading-tight">E CLUB: Fueling Entrepreneurship at PESU</h2>
+                    <div class="space-y-6 text-lg text-muted-foreground">
+                        <p>We are more than just a club – we&apos;re a community of dreamers, innovators, and future leaders. Our mission is to foster entrepreneurial spirit and provide the resources needed to turn ideas into successful ventures.</p>
+                        <p>Through mentorship, workshops, and networking events, we help students develop the skills and connections they need to succeed in the startup ecosystem.</p>
+                        <div class="grid grid-cols-2 gap-8 mt-12">
+                            <div class="p-6 bg-card text-card-foreground rounded-lg border shadow-sm">
+                                <h3 class="text-2xl font-bold mb-2">30+</h3>
+                                <p class="text-muted-foreground">Events hosted</p>
+                            </div>
+                            <div class="p-6 bg-card text-card-foreground rounded-lg border shadow-sm">
+                                <h3 class="text-2xl font-bold mb-2">50+</h3>
+                                <p class="text-muted-foreground">Active Members</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="coming-soon" class="py-20 px-4 bg-muted">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold">Events</h2>
+            <p class="text-muted-foreground mt-4">Stay tuned for exciting updates!</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section --> <!-- TODO: make this a loop instead.-->
+    <section id="gallery" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+                    <img src="{% static 'Gallery/1.jpg' %}" alt="Gallery image 1" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+                    <img src="{% static 'Gallery/2.jpg' %}" alt="Gallery image 2" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+                    <img src="{% static 'Gallery/3.jpg' %}" alt="Gallery image 3" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+                    <img src="{% static 'Gallery/4.jpeg' %}" alt="Gallery image 4" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+                    <img src="{% static 'Gallery/5.jpeg' %}" alt="Gallery image 5" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Meet Our Team</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                {% for member in team_members %}
+                <div class="text-center">
+                    <div class="relative">
+                        <img src="{% static member.image %}" alt="{{ member.name }}" class="rounded-full mx-auto mb-4" width="200" height="200">
+                    </div>
+                    <h3 class="font-semibold">{{ member.name }}</h3>
+                    <p class="text-muted-foreground">{{ member.position }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>

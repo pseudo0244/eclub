@@ -38,12 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'homepage'
-    'about'
-    'events'
-    'gallery'
-    'blogs'
-    'contact'
+    'homepage',
+    'about',
+    'events',
+    'gallery',
+    'blogs',
+    'contact',
     
 ]
 
@@ -62,7 +62,9 @@ ROOT_URLCONF = 'My_try_Eclub.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates', #telling django where we are storing all our templates. (a public folder so that all can access.)
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS=[#telling django where we are keeping all our static files so that it can handle the rest.
+    BASE_DIR/'static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

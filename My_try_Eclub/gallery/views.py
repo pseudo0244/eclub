@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 def render_gallery(request):
-    return('gallery will come here')
+    return HttpResponse('gallery will come here')

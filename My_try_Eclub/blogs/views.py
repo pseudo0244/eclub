@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 def render_temp_blogs(request):
-    return("Blogs will come here.")
+    return HttpResponse("Blogs will come here.")
