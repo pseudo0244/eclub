@@ -10,3 +10,6 @@ class team_members(m.Model):
 
 class gallery(m.Model):
     image = m.CharField(max_length=100000000) #is a byte64 encrypted string
+
+class blerb(m.Model): #must have only one instance. Just so that the image can be byte64 encrypted. instead of stored on the server.
+    image = m.CharField(max_length=100000000) #is a byte64 encrypted string
