@@ -117,23 +117,17 @@
     <section id="gallery" class="py-20 px-4">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold mb-12 text-center">Gallery</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-                    <img src="{% static 'Gallery/1.jpg' %}" alt="Gallery image 1" class="w-full h-full object-cover">
+            {% if gallery %}
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    {% for image in gallery %}
+                        <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
+                            <img src="data:image/png;base64,{{ image.image }}" alt="Gallery image {{ forloop.counter }}" class="w-full h-full object-cover">
+                        </div>
+                    {% endfor %}
                 </div>
-                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-                    <img src="{% static 'Gallery/2.jpg' %}" alt="Gallery image 2" class="w-full h-full object-cover">
-                </div>
-                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-                    <img src="{% static 'Gallery/3.jpg' %}" alt="Gallery image 3" class="w-full h-full object-cover">
-                </div>
-                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-                    <img src="{% static 'Gallery/4.jpeg' %}" alt="Gallery image 4" class="w-full h-full object-cover">
-                </div>
-                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-                    <img src="{% static 'Gallery/5.jpeg' %}" alt="Gallery image 5" class="w-full h-full object-cover">
-                </div>
-            </div>
+            {% else %}
+                <p class="text-center text-gray-500">No images available.</p>
+            {% endif %}
         </div>
     </section>
 
@@ -145,7 +139,7 @@
                 {% for member in team_members %}
                 <div class="text-center">
                     <div class="relative">
-                        <img src="{% static member.image %}" alt="{{ member.name }}" class="rounded-full mx-auto mb-4" width="200" height="200">
+                        <img src="data:image/png;base64,{{ member.image }}" alt="{{ member.name }}" class="rounded-full mx-auto mb-4" width="200" height="200">
                     </div>
                     <h3 class="font-semibold">{{ member.name }}</h3>
                     <p class="text-muted-foreground">{{ member.position }}</p>

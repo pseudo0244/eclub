@@ -1,21 +1,34 @@
 from django.shortcuts import render
+from .models import team_members, gallery
+import base64
+
 
 def render_simple_homepage(request):
-    team_members = [
-        {"name": "Kaashvi R", "position": "President", "image": "Team/Kaashvi.png"},
-        {"name": "Neha Nair", "position": "Vice President", "image": "Team/Neha Nair_VP.jpg"},
-        {"name": "Devansh V", "position": "Head of Events", "image": "Team/Devansh_Events.jpg"},
-        {"name": "Shrikrishna Pandit", "position": "Head of Events", "image": "Team/Shrikrishna.jpg"},
-        {"name": "Prathamesh Devadiga", "position": "Head of Technology", "image": "Team/Prathamesh.jpg"},
-        {"name": "Kamya Jha", "position": "Head of SMM", "image": "Team/Kamya.jpg"},
-        {"name": "Shreya S", "position": "Head of Corporate Relations", "image": "Team/Shreya S CR.jpg"},
-        {"name": "Saabith Salem", "position": "Head of Corporate Relations", "image": "Team/SaabithSaleem_CR.jpg"},
-        {"name": "Amogh K", "position": "Head of Operations", "image": "Team/amogh_ops_head.jpg"},
-        {"name": "Parikshil Sharma", "position": "Head of Operations", "image": "Team/Parikshilsharma.jpg"},
-    ]
-    return render(request, 'temp_home.html', {"team_members": team_members})
+    team = team_members.objects.all()
+    gallery_pics = gallery.objects.all()
+    return render(request, 'temp_home.html', {"team_members": team, 'gallery':gallery_pics})
+#Have made the team members easy to change without need to edit the code/the html file as it no longer hard coded.
+#This is a more flexible method. However, this may reduce efficieny as it needs an extra query to the database to get the team members
+#I have also made the images byte64 encrypted strings. This is more efficient than fetching each image from the databse.
+#Images need not be stored in the database. when a new member is added, one can simply use https://www.base64-image.de/ to byte64 encrypt the image into a string and add the string with the other details.
+#the same byte64 encrypting has been done for the images in the gallery.
+#However, this may lead to client side rendering of images, will fix later.
 
-#need to create a model for team members and specifics.
-#byte64 encrypt the strings prolly, 
-#need to make a for loop for the images instead of having it hard coded as it is now.
+#need to make the collab now button work.
+#a model for the hero text and image.
+#fix the events section.
+#need to make a for loop for the images instead of having it hard coded as it is now. (model?)
 #could have the text be a model though that might slow down the loading.
+
+#Heres the code I used to byte64 encrypt the images:
+#import base64
+#     for i in team: #similarly for gallery
+#         i.image=encode_image_to_base64(i.imagepath)
+#         i.save()
+# def encode_image_to_base64(image_path):
+#     try:
+#         with open(image_path, "rb") as image_file:
+#             return base64.b64encode(image_file.read()).decode("utf-8")
+#     except:
+#         return image_path
+# #In the HTML, I loaded the images as: <img src="data:image/png;base64,{{ member.image }}" alt="{{ member.name }}" class="rounded-full mx-auto mb-4" width="200" height="200">
