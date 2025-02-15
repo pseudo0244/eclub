@@ -14,3 +14,8 @@ def render_simple_homepage(request):
         {"name": "Parikshil Sharma", "position": "Head of Operations", "image": "Team/Parikshilsharma.jpg"},
     ]
     return render(request, 'temp_home.html', {"team_members": team_members})
+
+#need to create a model for team members and specifics.
+#byte64 encrypt the strings prolly, 
+#need to make a for loop for the images instead of having it hard coded as it is now.
+#could have the text be a model though that might slow down the loading.
