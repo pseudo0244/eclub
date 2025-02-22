@@ -17,8 +17,8 @@ def render_simple_homepage(request):
 #I have left the text on the blerb section hardcoded as it is unlikely to change and was increasing load time unnecesarily.
 
 #TODO:
-#the loading thingy keeps spinning long after the page has loaded. need to fix (maybe by server side rendering)
-#However, this may lead to client side rendering of images, will fix later.
+# I think speed can significantly be increased by rendering using static. but that isnt V friendly to admin, so try.
+# #However, this may lead to client side rendering of images, will fix later.
 #need to make the collab now button work.
 #fix the events section.
 

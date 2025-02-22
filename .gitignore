@@ -42,3 +42,5 @@ next-env.d.ts
 
 #pycache
 .pyc
+.cpython-38.pyc
+.cpython-310.pyc
