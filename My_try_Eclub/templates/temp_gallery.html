@@ -10,7 +10,9 @@
         <title>The Entrepreneurship Club</title>
         <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     </head>
-<body class="bg-[#020817] text-[#e0e0e0]" >
+    <br>
+    <br>
+<body class="bg-[#020817] text-[#e0e0e0] p-8" >
     <!-- Header -->
     <header>
         <nav class="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-gray-700">
@@ -32,7 +34,7 @@
         </nav>
     </header>
     <div class="gallery-container">
-        <h1>Gallery</h1>
+        <!--h1>Gallery</h1-->
         {% if gallery %}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {% for image in gallery %}
