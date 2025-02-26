@@ -7,11 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Entrepreneurship Club</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
-<body >
+
+
+<body class="bg-[#020817] text-[#e0e0e0]" >
     <!-- Header -->
     <header>
-        <nav class="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b">
+        <nav class="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-gray-700">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <div class="flex items-center">
@@ -32,8 +35,10 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,hsl(var(--primary))_0.1,transparent_2px)] bg-[length:24px_24px]"></div>
+        <!-- Change bg to gray instead of primary -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,6B7280_0.1,transparent_2px)] bg-[length:24px_24px]"></div>
         <div class="relative z-10 text-center px-4 max-w-7xl mx-auto">
+    
             <div class="relative inline-block">
                 <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight relative z-10">
                     <span class="block transform hover:scale-105 transition-transform">The</span>
@@ -43,28 +48,30 @@
                 <div class="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
                 <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
             </div>
-            <p class="text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto">
+            <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-[#b0c4de]">
+
                 Have an idea but unsure what to do next? Fill out the form to collaborate with us!
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button class="h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90">Collab Now</button>
+                <button class="h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90 bg-[#3c82f6] fg-[#020817]">Collab Now</button>
                 <button class="h-11 rounded-md px-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground"> <a href="/events">Events</a> </button>
             </div>
         </div>
-        <div class="absolute top-1/4 left-[15%] bg-background/10 backdrop-blur-sm transform -rotate-12 hover:rotate-0 transition-transform">
-            <div class="p-6">
+        <div class="absolute top-1/4 left-[15%] bg-background/10 backdrop-blur-sm transform origin-center -rotate-12 hover:rotate-0 transition-transform">
+            <div class="absolute top-1/4 left-[15%] w-48 h-25 backdrop-blur-md border border-gray-600 rounded-xl p-6 shadow-md transform origin-center -rotate-12 hover:rotate-0 transition-transform">
                 <p class="text-lg font-semibold">5+</p>
                 <p class="text-sm text-muted-foreground">Startups Launched</p>
             </div>
+            
         </div>
         <div class="absolute bottom-1/4 right-[15%] bg-primary/10 backdrop-blur-sm transform rotate-12 hover:rotate-0 transition-transform">
-            <div class="p-6">
+            <div class="absolute bottom-1/4 right-[15%] w-48 h-25 backdrop-blur-md border border-gray-600 rounded-xl p-6 shadow-md transform rotate-12 hover:rotate-0 transition-transform">
                 <p class="text-lg font-semibold">30+</p>
                 <p class="text-sm text-muted-foreground">Events Hosted</p>
             </div>
         </div>
         <div class="absolute top-1/4 right-[20%] bg-background/10 backdrop-blur-sm transform rotate-6 hover:rotate-0 transition-transform">
-            <div class="p-6">
+            <div class="absolute top-1/4 right-[20%] w-48 h-25 backdrop-blur-md border border-gray-600 rounded-xl p-6 shadow-md transform -rotate-12 hover:rotate-0 transition-transform">
                 <p class="text-lg font-semibold">50+</p>
                 <p class="text-sm text-muted-foreground">Active Members</p>
             </div>
