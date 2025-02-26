@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'gallery_styles.css' %}">
-</head>
-<body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <html lang="en" class="dark">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles.css' %}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Entrepreneurship Club</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    </head>
+<body class="bg-[#020817] text-[#e0e0e0]" >
+    <!-- Header -->
+    <header>
+        <nav class="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <span class="text-xl font-bold">E-CLUB</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="/" class="hover:text-primary">Home</a>
+                        <a href="/about" class="hover:text-primary">About</a>
+                        <a href="/events" class="hover:text-primary">Events</a>
+                        <a href="/gallery" class="hover:text-primary">Gallery</a>
+                        <a href="/blogs" class="hover:text-primary">Blogs</a>
+                    </div>
+                    <button class="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md"> <a href="/contact">Contact Us</a> </button>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div class="gallery-container">
         <h1>Gallery</h1>
         {% if gallery %}
