@@ -153,11 +153,16 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                 {% for member in team_members %}
                 <div class="text-center">
-                    <div class="relative">
-                        <img src="data:image/png;base64,{{ member.image }}" alt="{{ member.name }}" class="rounded-full mx-auto mb-4" width="200" height="200">
+                    <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-6">
+                        <img src="data:image/png;base64,{{ member.image }}" 
+     alt="{{ member.name }}" 
+     class="w-48 h-48 object-contain rounded-full mx-auto mb-6">
+
+
+                        
                     </div>
                     <h3 class="font-semibold">{{ member.name }}</h3>
-                    <p class="text-muted-foreground">{{ member.position }}</p>
+                    <p class="text-muted-foreground opacity-60">{{ member.position }}</p>
                 </div>
                 {% endfor %}
             </div>
