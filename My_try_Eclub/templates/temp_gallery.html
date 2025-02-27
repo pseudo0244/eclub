@@ -12,7 +12,7 @@
     </head>
     <br>
     <br>
-<body class="bg-[#020817] text-[#e0e0e0] p-8" >
+<body class="bg-[#020817] text-[#e0e0e0] p-8 tracking-wider" >
     <!-- Header -->
     <header>
         <nav class="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-gray-700">
@@ -22,11 +22,11 @@
                         <span class="text-xl font-bold">E-CLUB</span>
                     </div>
                     <div class="flex space-x-4">
-                        <a href="/" class="hover:text-primary">Home</a>
-                        <a href="/about" class="hover:text-primary">About</a>
-                        <a href="/events" class="hover:text-primary">Events</a>
-                        <a href="/gallery" class="hover:text-primary">Gallery</a>
-                        <a href="/blogs" class="hover:text-primary">Blogs</a>
+                        <a href="/" class="hover:text-[#3c82f5]">Home</a>
+                        <a href="/about" class="hover:text-[#3c82f5]">About</a>
+                        <a href="/events" class="hover:text-[#3c82f5]">Events</a>
+                        <a href="/gallery" class="hover:text-[#3c82f5]">Gallery</a>
+                        <a href="/blogs" class="hover:text-[#3c82f5]">Blogs</a>
                     </div>
                     <button class="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md"> <a href="/contact">Contact Us</a> </button>
                 </div>
@@ -42,9 +42,13 @@
         {% if gallery %}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {% for image in gallery %}
-                <div class="overflow-hidden hover:scale-105 transition-transform rounded-lg shadow-md">
-                    <img src="data:image/png;base64,{{ image.image }}" alt="Gallery image {{ forloop.counter }}" class="w-full h-full object-cover">
-                </div>
+            <div class="overflow-hidden rounded-lg shadow-md cursor-pointer hover:scale-105">
+                <img src="data:image/png;base64,{{ image.image }}" alt="Gallery image {{ forloop.counter }}" 
+                     class="w-full h-full object-cover transition-transform duration-300" 
+                     onclick="openModal(this)">
+            </div>
+            
+            
             {% endfor %}
         </div>
         {% else %}
@@ -52,5 +56,41 @@
         {% endif %}
             </div>
     </div>
+    <div id="imageModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 hidden">
+        <img id="modalImg" class="max-w-3xl max-h-3xl rounded-lg shadow-lg transition-transform duration-300 scale-0">
+    </div>
+    <script>
+        function openModal(imgElement) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImg");
+        
+            // Set modal image source
+            modalImg.src = imgElement.src;
+        
+            // Show modal
+            modal.classList.remove("hidden");
+        
+            // Delay for smooth scaling effect
+            setTimeout(() => {
+                modalImg.classList.remove("scale-0");
+                modalImg.classList.add("scale-100");
+            }, 50);
+        }
+        
+        // Close modal when clicking outside image
+        document.getElementById("imageModal").onclick = function(event) {
+            if (event.target.id === "imageModal") {
+                const modalImg = document.getElementById("modalImg");
+                modalImg.classList.remove("scale-100");
+                modalImg.classList.add("scale-0");
+        
+                // Hide modal after transition
+                setTimeout(() => {
+                    this.classList.add("hidden");
+                }, 300);
+            }
+        };
+        </script>
+        
 </body>
 </html>
