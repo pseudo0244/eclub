@@ -12,7 +12,7 @@
     </head>
     <br>
     <br>
-<body class="bg-[#020817] text-[#e0e0e0] p-8 tracking-wider" >
+<body class="bg-[#020817] text-[#e0e0e0] tracking-wider" >
     <!-- Header -->
     <header>
         <nav class="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-gray-700">
@@ -33,12 +33,12 @@
             </div>
         </nav>
     </header>
-    <div class="gallery-container">
+    <div class="gallery-container p-8">
         <div class="flex items-center justify-center h-20 border-transparent ]">
           
             <h1 class="text-6xl font-bold">Our Gallery</h1>
         </div>
-        
+        <br>
         {% if gallery %}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {% for image in gallery %}
