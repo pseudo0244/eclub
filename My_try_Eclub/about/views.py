@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def render_about_us_page(request):
-        return HttpResponse("About us page will come here.")
+        return render(request,"temp_about.html")
 
 #byte64 image makes slower?
 #should we make model for text of mission etc?
